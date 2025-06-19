@@ -1,0 +1,66 @@
+### Register User
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+  "username": "user8",
+  "email": "user8@gmail.com",
+  "password": "12345"
+}
+
+###
+
+### Login User
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+  "username": "user1",
+  "password": "12345"
+}
+
+###
+POST http://localhost:3000/api/expenses/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlkIjoiNjg0ZmU1YjBkMzIxZGExZGZkYTEyMGYyIn0sImlhdCI6MTc1MDE0OTY4MSwiZXhwIjoxNzUwMjM2MDgxfQ.MmW4Px4hIInfYyq4n5_xqDjly565xNhIEN7IGcqTmxY
+
+[
+  {
+    "user_id": "684fe5b0d321da1dfda120f2",
+    "title": "Grocery Shopping",
+    "amount": 1500.89,
+    "date": "2025-06-15T00:00:00.000Z",
+    "description": "Monthly groceries from supermarket",
+    "category": "Food",
+    "type": "Expense"
+  },
+  {
+    "user_id": "684fe5b0d321da1dfda120f2",
+    "title": "Freelance Payment",
+    "amount": 10000,
+    "date": "2025-06-12T00:00:00.000Z",
+    "description": "Website development project payment",
+    "category": "Work",
+    "type": "Income"
+  },
+  {
+    "user_id": "684fe5b0d321da1dfda120f2",
+    "title": "Electricity Bill",
+    "amount": 2200,
+    "date": "2025-06-10T00:00:00.000Z",
+    "description": "Monthly electricity bill",
+    "category": "Utilities",
+    "type": "Expense"
+  }
+  
+]
+
+
+
+###
+
+### Protected Route: Current User
+# POST http://localhost:3000/api/users/current
+# Authorization: Bearer {{access_token}}
+
+
